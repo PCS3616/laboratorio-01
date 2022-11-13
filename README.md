@@ -227,7 +227,7 @@ nível mais alto, é o /, o que significa que o comando abaixo também é
 valido:
 
 ```bash
-\# Vai para o diretório-raiz do sistema de arquivos.\
+# Vai para o diretório-raiz do sistema de arquivos.
 cd /
 ```
 
@@ -240,8 +240,7 @@ caminho absoluto final que será considerado pelo comando.
 cd /home/ubuntu
 
 # Vai para Desktop (caminho relativo). Como o diretório atual era
-# /home/ubuntu (por causa do comando anterior), este comando irá
-levá-lo
+# /home/ubuntu (por causa do comando anterior), este comando irá levá-lo
 # até o diretório /home/ubuntu/Desktop.
 cd Desktop
 ```
@@ -274,8 +273,7 @@ Usando estes diretórios especiais, você consegue construir caminhos para
 referenciar qualquer diretório ou arquivo do sistema.
 
 ```bash
-# Atenção! Antes de continuar, tenha certeza de que você entende por
-que
+# Atenção! Antes de continuar, tenha certeza de que você entende por que
 # todos os comandos abaixo são equivalentes. Se tiver alguma dúvida,
 # peça ajuda.
 
@@ -328,10 +326,8 @@ que eles podem ser separado por um espaço ou por =.
 mkdir (***m**a**k**e **dir**ectory*): cria diretórios.
 
 ```bash
-# Cria um diretório chamado "foo". Como "foo" é um caminho
-relativo (pois
-# não começa com "/"), o novo diretório será criado dentro do
-diretório
+# Cria um diretório chamado "foo". Como "foo" é um caminho relativo (pois
+# não começa com "/"), o novo diretório será criado dentro do diretório
 # atual.
 mkdir foo
 
@@ -357,29 +353,24 @@ ls
 # exemplo, /var/log).
 ls /var/log
 
-# A opção "-l" é usada para listar os arquivos no formato
-"longo",
+# A opção "-l" é usada para listar os arquivos no formato "longo",
 # mostrando, para cada arquivo, informações como tamanho, data de
 # modificação e usuário dono arquivo.
 ls -l /
 
-# A opção "-a" é usada para listar todos os arquivos, incluindo
-arquivos
+# A opção "-a" é usada para listar todos os arquivos, incluindo arquivos
 # ocultos e especiais, como . e ..
 ls -a
 
 # Muitas vezes, opções também podem ser combinadas. Neste exemplo, o
-# comando ls é chamado com as opções "-l" e "-a" de forma
-unificada.
+# comando ls é chamado com as opções "-l" e "-a" de forma unificada.
 ls -la
 
-# A ordem das opções não importa. Assim, este comando é exatamente
-igual
+# A ordem das opções não importa. Assim, este comando é exatamente igual
 # ao anterior.
 ls -al
 
-# O "*" pode ser usado como um wildcard (literalmente, coringa),
-para
+# O "*" pode ser usado como um wildcard (literalmente, coringa), para
 # encontrar arquivos cujo nome obedece a um determinado padrão.
 # Neste exemplo, o comando lista todos os arquivos do diretório atual
 # que terminam com ".txt".
@@ -431,8 +422,7 @@ cp foo /tmp/bar
 # é opcional.
 cp *.txt /var/backup/
 
-# Copia recursivamente. Usado para copiar diretórios ao invés de
-arquivos
+# Copia recursivamente. Usado para copiar diretórios ao invés de arquivos
 # individuais.
 cp -r diretorio_origem diretorio_destino
 ```
@@ -453,8 +443,7 @@ mv (**m**o**v**e): move arquivos. Também usado para renomear.
 
 ```bash
 # Move arquivo foo do diretório dir1 para o diretório dir2.
-# Novamente, a "/" no final é opcional, mas serve para deixar mais
-claro
+# Novamente, a "/" no final é opcional, mas serve para deixar mais claro
 # que o destino é um diretório.
 mv dir1/foo dir2/
 
@@ -512,10 +501,8 @@ find: encontra arquivos. Aceita diversas opções para especificar os
 diretórios de busca, padrões de nomes, tipos de arquivos, etc.
 
 ```bash
-# Encontra e imprime os nomes de todos os arquivos dentro do
-diretório
-# atual e de seus subdiretórios, caso existam.
-find .
+# Encontra e imprime os nomes de todos os arquivos dentro do diretório
+# atual e de seus subdiretórios, caso existam. find .
 # Encontra apenas arquivos com extensão ".txt"
 find . -name "*.txt"
 ```
@@ -528,10 +515,8 @@ conteúdos (palavras, frases, padrões) dentro de arquivos.
 # Procura pelo termo "apple" dentro do arquivo fruits.txt
 grep apple fruits.txt
 
-# A opção "-i" pode ser usada para realizar uma busca no modo
-"case
-# insensitive", isto é, considerando maiúsculas e minúsculas da
-mesma
+# A opção "-i" pode ser usada para realizar uma busca no modo "case
+# insensitive", isto é, considerando maiúsculas e minúsculas da mesma
 # forma.
 grep -i apple fruits.txt
 ```
@@ -632,14 +617,10 @@ echo "Hello, my name is Bob."
 # intepretadas.
 echo "Hello! My username is: $(whoami)"
 
-# Imprime os diversos argumentos. Note que, neste caso, o comando
-"echo"
-# recebe 7 argumentos (um para cada termo separado por um espaço).
-Álém
-# disso, o 7o. argumento não é "~", pois, assim como no caso do
-wildcard
-# (visto acima), é de responsabilidade do shell interpretar o "~" e
-já
+# Imprime os diversos argumentos. Note que, neste caso, o comando "echo"
+# recebe 7 argumentos (um para cada termo separado por um espaço). Álém
+# disso, o 7o. argumento não é "~", pois, assim como no caso do wildcard
+# (visto acima), é de responsabilidade do shell interpretar o "~" e já
 # repassar o valor final para o comando.
 echo My home folder is located at: ~
 ```
@@ -673,16 +654,14 @@ Por exemplo:
 # diretório ~, incluindo os ocultos.
 ls -a ~
 
-# Se quisermos listar apenas os que começam com a letra "D",
-podemos
+# Se quisermos listar apenas os que começam com a letra "D", podemos
 # conectar a saída deste comando ao `grep`, como mostrado abaixo.
 # Não se preocupe com o "^" por enquanto; você o entenderá melhor
 # quando falarmos sobre expressões regulares.
 ls -a ~ | grep ^D
 
 # Finalmente, se quisermos ordenar os resultados em ordem alfabética
-# decrescente, podemos conectar a saída do `grep` ao comando
-`sort`,
+# decrescente, podemos conectar a saída do `grep` ao comando `sort`,
 # passando a opção "-r", que indica ordenação em ordem inversa:
 ls -a ~ | grep ^D | sort -r
 ```
