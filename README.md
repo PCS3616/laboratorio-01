@@ -81,8 +81,9 @@ menos entediante!) de aprender a usar uma nova ferramenta.
 
 Ao longo deste tutorial, você encontrará diversos exercícios. Para cada
 exercício, você deverá criar um arquivo com o nome
-{NÚMERO_DO_EXERCÍCIO}.out (por exemplo, 2_1.out), dentro da pasta `submission` 
-que será submetido.
+{NÚMERO_DO_EXERCÍCIO}.out (por exemplo, 2_1.out).
+No primeiro momento recomendamos criar todos os arquivos dentro de uma pasta,
+ao final desse exercicio explicamos como cria-submeter os arquivos.
 
 A figura abaixo mostra um programa em execução: o shell.
 
@@ -720,19 +721,21 @@ Dica: o arquivo README.md foi escrito no formato
 [Markdown](https://en.wikipedia.org/wiki/Markdown), e pode
 ser lido com qualquer editor de texto. Um jeito fácil de ler o arquivo
 final, já formatado, é abri-lo usando o editor
-[Atom](https://atom.io/) e usar a ferramenta de *preview*
+[VSCode](https://code.visualstudio.com/) e usar a ferramenta de *preview*
 de Markdown deste editor.
 
-Para instalar o Atom:
+Para instalar o VSCode:
 
-1.  Execute sudo snap install atom em um terminal
+1.  Execute `sudo snap install code` em um terminal
 
 2.  Espere a instalação e não se assuste com a saída deste comando
 
-Para ler o arquivo no Atom:
+Para ler o arquivo no VSCode:
 
-1.  Execute atom \~/Documents/pcs3616/lab1/ em um terminal;
+1.  Execute `code ~/Documents/pcs3616/lab1/` em um terminal;
 
 2.  Encontre o arquivo README.md na listagem de arquivos (coluna da > esquerda) e clique para abri-lo;
 
-3.  No menu do Atom, clique em Packages \> Markdown Preview \> Toggle Preview.
+3.  No canto superior direito clique no icone de preview markdown (exemplo abaixo) ou clique `Ctrl+Shift+V`
+
+![](media/md-preview.gif)
