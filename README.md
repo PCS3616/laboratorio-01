@@ -64,11 +64,6 @@ Se você desejar compartilhar um diretório entre a sua máquina e a VM, dê
 uma olhada [neste tutorial](https://balbertini.github.io/vhdl_vmghdl-pt_BR.html)
 do professor Bruno Albertini.
 
-Caso você tenha problemas para configurar a VM (ova demorando muito pra
-baixar, erros que vão tomar muito tempo, etc.), você pode utilizar
-**NESTA AULA** [este simulador online](https://cocalc.com), com ele você pode resolver
-todos os exercícios desta aula a não ser o último.
-
 **Observação:** a partir de agora, que você já tem a VM, não vamos mais
 usar o Windows. Por isso, você pode colocar a VM no modo \"tela cheia\"
 (*full screen mode*), abrir o Moodle usando o Firefox que está instalado
@@ -86,8 +81,8 @@ menos entediante!) de aprender a usar uma nova ferramenta.
 
 Ao longo deste tutorial, você encontrará diversos exercícios. Para cada
 exercício, você deverá criar um arquivo com o nome
-{NÚMERO_DO_EXERCÍCIO}.out (por exemplo, 2_1.out), compactar esse arquivo
-com o nome no padrão 2_1.zip e submeter o .ZIP.
+{NÚMERO_DO_EXERCÍCIO}.out (por exemplo, 2_1.out), dentro da pasta `submission` 
+que será submetido.
 
 A figura abaixo mostra um programa em execução: o shell.
 
@@ -141,7 +136,7 @@ debora: ~/Desktop $
 ```
 
 Para saber mais sobre como modificar o seu prompt, consulte a seção
-[Recursos Adicionais](#TODO).
+[Recursos Adicionais](EXTRA.md).
 
 Repare que, acima, mencionamos algo sobre \"a maioria dos shells\". Pois
 é, não existe um único shell. No mundo *Unix-like* (sistemas
