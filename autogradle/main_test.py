@@ -1,7 +1,5 @@
 from pathlib import Path
 
-from sign import verify
-
 submission_path = Path("./submission")
 
 def test_2_1():
@@ -26,7 +24,7 @@ def test_2_3():
 
     with open(file) as fp:
         content = fp.read().strip()
-        assert(content == "mkdir: cannot create directory ‘/tmp’: File exists")
+        assert(content == "mkdir: não foi possível criar o diretório “baz”: Arquivo existe")
 
 def test_2_4():
     file = submission_path / '2_4.out'
@@ -36,7 +34,9 @@ def test_2_4():
         content = fp.read().strip()
         files = content.split('\n')
 
-        assert('Desktop' in files)
+        assert('bin' in files)
+        assert('tmp' in files)
+        assert('dev' in files)
 
 def test_2_5():
     file = submission_path / '2_5.out'
@@ -46,9 +46,7 @@ def test_2_5():
         content = fp.read().strip()
         files = content.split('\n')
 
-        assert('bin' in files)
-        assert('tmp' in files)
-        assert('dev' in files)
+        assert('Desktop' in files)
 
 
 def test_2_6():
@@ -79,8 +77,4 @@ def test_desafio():
     assert(len(lines) > 5)
 
     assasino = lines[-1].strip()
-
-    assert(
-        verify(assasino, 'segunda') \
-        or verify(assasino, 'segunda')
-   )
+    assert('Rienne Lemeda' in assasino)
