@@ -1,4 +1,5 @@
 from pathlib import Path
+import re
 
 submission_path = Path("./submission")
 
@@ -8,7 +9,7 @@ def test_2_1():
 
     with open(file) as fp:
         content = fp.read().strip()
-        assert(content.startswith("/home/ubuntu"))
+        assert(content.startswith("/home/"))
 
 def test_2_2():
     file = submission_path / '2_2.out'
@@ -16,7 +17,7 @@ def test_2_2():
 
     with open(file) as fp:
         content = fp.read().strip()
-        assert(content == "/home/ubuntu")
+        assert(re.fullmatch(r"/home/[^/]+$", content))
 
 def test_2_3():
     file = submission_path / '2_3.out'
@@ -24,7 +25,7 @@ def test_2_3():
 
     with open(file) as fp:
         content = fp.read().strip()
-        assert(content == "mkdir: não foi possível criar o diretório “baz”: Arquivo existe")
+        assert(("mkdir: " in content) and  ("baz" in content))
 
 def test_2_4():
     file = submission_path / '2_4.out'
@@ -45,8 +46,9 @@ def test_2_5():
     with open(file) as fp:
         content = fp.read().strip()
         files = content.split('\n')
-
-        assert('Desktop' in files)
+        
+        # `Downloads` exists in both Portuguese and English
+        assert('Downloads' in files) 
 
 
 def test_2_6():
