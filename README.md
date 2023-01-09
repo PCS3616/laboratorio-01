@@ -710,7 +710,7 @@ comando "unzip clmystery-pt-BR-v2.zip").
 Em seguida, leia o arquivo README.md, que contém as instruções de como
 resolver o exercício.
 
-**Entrega**: enviar um zip (clmystery.zip) contendo um shell script
+**Entrega**: enviar um shell script
 (clmystery.sh) com os comandos que você executou para resolver o
 mistério (para ajudar com isso, você pode usar o comando "history -w
 ./clmystery.sh"). O script, quando executado, pode imprimir diversas
