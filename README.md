@@ -701,9 +701,7 @@ como referência.
 
 ## Mistério da linha de comando
 
-Faça o download [deste arquivo zip](https://edisciplinas.usp.br/mod/resource/view.php?id=3984344)
-(turma de segunda) ou [deste arquivo zip](https://edisciplinas.usp.br/mod/resource/view.php?id=3984345)
-(turma de quarta).
+Faça o download [deste arquivo zip](https://drive.google.com/file/d/1yqkVTduS5IDj3bOt-d0t-O_--kOJ3TKh/view?usp=share_link).
 
 Coloque o zip em algum diretório dentro da VM (sugestão:
 \~/Documents/pcs3616/lab1/) e extraia o conteúdo (você pode usar o
