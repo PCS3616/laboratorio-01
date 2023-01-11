@@ -183,7 +183,9 @@ pwd
 
 **Exercício 2.1:** execute o comando pwd no seu terminal e responda:
 qual o seu diretório atual? (coloque a saída do comando no arquivo de
-solução, por exemplo: /home/ubuntu/foo no arquivo 2_1.out).
+solução, por exemplo: /home/ubuntu/foo no arquivo 2_1.out. Isso pode
+ser feito redirecionando a saída do terminal para um arquivo usando
+`>`, neste caso `pwd > 2_1.out`).
 
 cd (**c**hange **d**irectory): usado para ir até diretórios. Quando
 executado sem argumentos, este comando leva você até o diretório do seu
