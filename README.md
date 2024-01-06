@@ -1,7 +1,5 @@
 # PCS3616 - Laboratório 1 - Introdução ao UNIX 1
 
-## Configuração da VM
-
 Um dos objetivos práticos da disciplina é que você se familiarize com o
 uso da linha de comando e com sistemas operacionais do tipo Unix, como o
 Linux. Entre os diversos sistemas que serviriam para este propósito,
@@ -14,60 +12,6 @@ laboratório, ele será executado em uma máquina virtual (*virtual
 machine*, ou VM), dentro do Windows. Desta forma, você também irá se
 familiarizar com o conceito de **virtualização**, que será abordado nas
 aulas teóricas.
-
-Se você já usa Linux na sua máquina, pode utilizar ela mesma para o
-laboratório, mas não nos responsabilizamos caso algum código não
-funcione (com algum grau de certeza os programas vão rodar em qualquer
-distribuição baseada em Debian).
-
-O software de virtualização que iremos utilizar é o
-[VirtualBox](https://www.virtualbox.org/), que você deve
-instalar na sua máquina.
-
-A primeira atividade desta aula é criar uma VM com o Ubuntu, seguindo os
-passos abaixo.
-
-1.  Instale o VirtualBox do site oficial.
-
-2.  Baixe o arquivo "Ubuntu18-04-1_PCS3616.ova" [daqui](https://drive.google.com/file/d/1hlSvHk0TclyNkq1NoslMVsycU8VLinsO/view?usp=sharing).
-
-3.  Abra o VirtualBox.
-
-4.  Escolha File -\> Import Appliance .
-
-5.  Encontre o .ova que você acabou de baixar e importe ele.
-
-6.  Na tela seguinte (\"Appliance settings\"), altere as configurações a
-    seguir (não é necessário alterar as que já estiverem com o valor
-    correto), mas também não se sinta obrigado a nada, você é livre:
-
- |Configuração                       |Valor                             |
- |-----------------------------------|----------------------------------|
- |CPU                                |2                                 |
- |RAM                                |4096                              |
-
-7.  Clique em Import para iniciar a importação. Após o término da
-    importação, a VM deverá aparecer na tela principal do VirtualBox,
-    com o status Powered Off.
-
-8.  Apague o arquivo .ova usado para criar a VM antes que esqueçamos
-    dele mais tarde.
-
-9.  No VirtualBox, clique no nome da VM recém-criada para selecioná-la
-    e, em seguida, clique em Start. Aguarde enquanto o sistema
-    operacional é iniciado.
-
-10. Faça login na VM com o usuário que já está selecionado (ubuntu). A
-    senha, que será alterada depois, é pcs3616.
-
-Se você desejar compartilhar um diretório entre a sua máquina e a VM, dê
-uma olhada [neste tutorial](https://balbertini.github.io/vhdl_vmghdl-pt_BR.html)
-do professor Bruno Albertini.
-
-**Observação:** a partir de agora, que você já tem a VM, não vamos mais
-usar o Windows. Por isso, você pode colocar a VM no modo \"tela cheia\"
-(*full screen mode*), abrir o Moodle usando o Firefox que está instalado
-dentro da VM e continuar de lá.
 
 ## Comandos Básicos
 
@@ -336,7 +280,7 @@ mkdir foo
 mkdir /home/ubuntu/foo
 ```
 
-**Exercício 2.3:** crie um diretório chamado baz dentro do diretório
+**Exercício 2.3:** crie um diretório chamado las dentro do diretório
 /tmp usando o comando mkdir. Agora, tente executar o comando novamente.
 Qual a mensagem de erro que aparece?
 
@@ -447,7 +391,7 @@ mv dir1/foo dir2/
 
 # Move arquivo foo para o mesmo diretório mas com outro nome, isto é,
 # renomeia o arquivo.
-mv dir1/foo dir1/baz
+mv dir1/foo dir1/las
 ```
 
 
@@ -456,8 +400,8 @@ comum de link é o tipo \"simbólico\", equivalente a um \"atalho\" no
 Windows.
 
 ```bash
-# Cria um link "simbólico": foo é um atalho para baz.
-ln -s baz foo
+# Cria um link "simbólico": foo é um atalho para las.
+ln -s las foo
 ```
 
 

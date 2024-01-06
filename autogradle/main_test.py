@@ -25,7 +25,7 @@ def test_2_3():
 
     with open(file) as fp:
         content = fp.read().strip()
-        assert(("mkdir: " in content) and  ("baz" in content))
+        assert(("mkdir: " in content) and  ("las" in content))
 
 def test_2_4():
     file = submission_path / '2_4.out'
